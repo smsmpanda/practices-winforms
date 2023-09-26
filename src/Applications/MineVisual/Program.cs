@@ -12,14 +12,16 @@ static class Program
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
 
-        LoginForm loginForm = new LoginForm();
-        DialogResult dialogResult = loginForm.ShowDialog();
-        if (dialogResult == DialogResult.OK)
-        {
-            Application.Run(new MainForm());
-        }
-        else {
-            Application.Exit();
-        }
+        //LoginForm loginForm = new LoginForm();
+        //DialogResult dialogResult = loginForm.ShowDialog();
+        //if (dialogResult == DialogResult.OK)
+        //{
+        //    Application.Run(new MainForm());
+        //}
+        //else {
+        //    Application.Exit();
+        //}
+
+        Application.Run(new MainForm());
     }
 }

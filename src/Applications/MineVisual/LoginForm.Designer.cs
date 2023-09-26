@@ -35,6 +35,9 @@ partial class LoginForm
         txtPwd = new TextBox();
         button1 = new Button();
         label3 = new Label();
+        uC_TextBox1 = new UserControls.UC_TextBox();
+        uC_TextBoxPadding1 = new UserControls.UC_TextBoxPadding();
+        uC_TextBox2 = new UserControls.UC_TextBox();
         SuspendLayout();
         // 
         // label1
@@ -95,6 +98,34 @@ partial class LoginForm
         label3.TabIndex = 6;
         label3.Text = "版权所有©smsmpanda";
         // 
+        // uC_TextBox1
+        // 
+        uC_TextBox1.BackColor = Color.WhiteSmoke;
+        uC_TextBox1.BorderStyle = BorderStyle.FixedSingle;
+        uC_TextBox1.Location = new Point(0, 0);
+        uC_TextBox1.Name = "uC_TextBox1";
+        uC_TextBox1.Size = new Size(255, 46);
+        uC_TextBox1.TabIndex = 7;
+        // 
+        // uC_TextBoxPadding1
+        // 
+        uC_TextBoxPadding1.BorderStyle = BorderStyle.FixedSingle;
+        uC_TextBoxPadding1.Location = new Point(0, 0);
+        uC_TextBoxPadding1.Name = "uC_TextBoxPadding1";
+        uC_TextBoxPadding1.Padding = new Padding(15);
+        uC_TextBoxPadding1.Size = new Size(317, 47);
+        uC_TextBoxPadding1.TabIndex = 9;
+        // 
+        // uC_TextBox2
+        // 
+        uC_TextBox2.BackColor = Color.WhiteSmoke;
+        uC_TextBox2.BorderStyle = BorderStyle.FixedSingle;
+        uC_TextBox2.Location = new Point(8, 8);
+        uC_TextBox2.Name = "uC_TextBox2";
+        uC_TextBox2.Size = new Size(255, 46);
+        uC_TextBox2.TabIndex = 10;
+        
+        // 
         // LoginForm
         // 
         AutoScaleDimensions = new SizeF(7F, 17F);
@@ -103,6 +134,9 @@ partial class LoginForm
         BackColor = Color.White;
         BackgroundImageLayout = ImageLayout.Stretch;
         ClientSize = new Size(290, 201);
+        Controls.Add(uC_TextBox2);
+        Controls.Add(uC_TextBoxPadding1);
+        Controls.Add(uC_TextBox1);
         Controls.Add(label3);
         Controls.Add(button1);
         Controls.Add(txtPwd);
@@ -126,4 +160,7 @@ partial class LoginForm
     private TextBox txtPwd;
     private Button button1;
     private Label label3;
+    private UserControls.UC_TextBox uC_TextBox1;
+    private UserControls.UC_TextBoxPadding uC_TextBoxPadding1;
+    private UserControls.UC_TextBox uC_TextBox2;
 }
