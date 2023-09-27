@@ -1,4 +1,6 @@
-﻿namespace MineVisual
+﻿using MineVisual.Controls.Btn;
+
+namespace MineVisual
 {
     partial class MainForm
     {
@@ -29,14 +31,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            uC_TextBox2 = new UserControls.UC_TextBox();
-            uC_TextBoxPadding1 = new UserControls.UC_TextBoxPadding();
+            uC_TextBox2 = new Controls.UC_TextBox();
             btnDrawArc = new Button();
-            firstControl1 = new UserControls.FirstControl();
-            flashTrackBar1 = new UserControls.FlashTrackBar();
-            button1 = new Button();
+            firstControl1 = new Controls.FirstControl();
+            flashTrackBar1 = new Controls.FlashTrackBar();
             dateTimePicker1 = new DateTimePicker();
-            baseButton1 = new UserControls.BaseButton();
+            ucBtnExt1 = new UCBtnExt();
             SuspendLayout();
             // 
             // uC_TextBox2
@@ -48,15 +48,6 @@
             uC_TextBox2.Name = "uC_TextBox2";
             uC_TextBox2.Size = new Size(255, 46);
             uC_TextBox2.TabIndex = 2;
-            // 
-            // uC_TextBoxPadding1
-            // 
-            uC_TextBoxPadding1.BorderStyle = BorderStyle.FixedSingle;
-            uC_TextBoxPadding1.Location = new Point(621, 25);
-            uC_TextBoxPadding1.Name = "uC_TextBoxPadding1";
-            uC_TextBoxPadding1.Padding = new Padding(15);
-            uC_TextBoxPadding1.Size = new Size(317, 47);
-            uC_TextBoxPadding1.TabIndex = 1;
             // 
             // btnDrawArc
             // 
@@ -89,54 +80,50 @@
             flashTrackBar1.Text = "flashTrackBar1";
             flashTrackBar1.Value = 10;
             // 
-            // button1
-            // 
-            button1.Location = new Point(154, 201);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 6;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(154, 163);
+            dateTimePicker1.Location = new Point(621, 276);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 7;
             // 
-            // baseButton1
+            // ucBtnExt1
             // 
-            baseButton1.Cursor = Cursors.Hand;
-            baseButton1.CustomBackColor = Color.DodgerBlue;
-            baseButton1.CustomBorderColor = Color.Empty;
-            baseButton1.CustomBorderWidth = 0;
-            baseButton1.CustomContent = "测试按钮";
-            baseButton1.CustomContentAlignment = ContentAlignment.MiddleCenter;
-            baseButton1.CustomMouseEnterBackColor = Color.FromArgb(2, 23, 12);
-            baseButton1.CustomRadius = 7;
-            baseButton1.Font = new Font("Microsoft YaHei UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            baseButton1.ForeColor = Color.White;
-            baseButton1.Location = new Point(128, 346);
-            baseButton1.Name = "baseButton1";
-            baseButton1.Size = new Size(101, 38);
-            baseButton1.TabIndex = 8;
-            baseButton1.ButtonClick += baseButton1_ButtonClick;
+            ucBtnExt1.BackColor = Color.Red;
+            ucBtnExt1.BtnBackColor = Color.FromArgb(9, 105, 218);
+            ucBtnExt1.BtnFont = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ucBtnExt1.BtnForeColor = Color.White;
+            ucBtnExt1.BtnText = "搜索";
+            ucBtnExt1.ConerRadius = 10;
+            ucBtnExt1.EnabledMouseEffect = false;
+            ucBtnExt1.FillColor = Color.FromArgb(9, 105, 218);
+            ucBtnExt1.IsRadius = true;
+            ucBtnExt1.IsShowRect = true;
+            ucBtnExt1.IsShowTips = true;
+            ucBtnExt1.Location = new Point(467, 25);
+            ucBtnExt1.Name = "ucBtnExt1";
+            ucBtnExt1.RectColor = Color.FromArgb(9, 105, 218);
+            ucBtnExt1.RectWidth = 1;
+            ucBtnExt1.Size = new Size(99, 47);
+            ucBtnExt1.TabIndex = 8;
+            ucBtnExt1.TabStop = false;
+            ucBtnExt1.TipForeColor = Color.White;
+            ucBtnExt1.TipsColor = Color.FromArgb(255, 128, 0);
+            ucBtnExt1.TipsText = "9";
+            ucBtnExt1.BtnClick += ucBtnExt1_BtnClick;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1166, 763);
-            Controls.Add(baseButton1);
+            ClientSize = new Size(1160, 789);
+            Controls.Add(ucBtnExt1);
             Controls.Add(dateTimePicker1);
-            Controls.Add(button1);
             Controls.Add(flashTrackBar1);
             Controls.Add(firstControl1);
             Controls.Add(btnDrawArc);
             Controls.Add(uC_TextBox2);
-            Controls.Add(uC_TextBoxPadding1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -145,13 +132,11 @@
         }
 
         #endregion
-        private UserControls.UC_TextBox uC_TextBox2;
-        private UserControls.UC_TextBoxPadding uC_TextBoxPadding1;
+        private Controls.UC_TextBox uC_TextBox2;
         private Button btnDrawArc;
-        private UserControls.FirstControl firstControl1;
-        private UserControls.FlashTrackBar flashTrackBar1;
-        private Button button1;
+        private Controls.FirstControl firstControl1;
+        private Controls.FlashTrackBar flashTrackBar1;
         private DateTimePicker dateTimePicker1;
-        private UserControls.BaseButton baseButton1;
+        private UCBtnExt ucBtnExt1;
     }
 }

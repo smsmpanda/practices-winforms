@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MineVisual.UserControls
+namespace MineVisual.Controls
 {
     public class FirstControl : System.Windows.Forms.Control
     {

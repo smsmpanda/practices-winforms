@@ -33,11 +33,8 @@ partial class LoginForm
         label2 = new Label();
         txtAccount = new TextBox();
         txtPwd = new TextBox();
-        button1 = new Button();
         label3 = new Label();
-        uC_TextBox1 = new UserControls.UC_TextBox();
-        uC_TextBoxPadding1 = new UserControls.UC_TextBoxPadding();
-        uC_TextBox2 = new UserControls.UC_TextBox();
+        button1 = new Controls.Btn.UCBtnExt();
         SuspendLayout();
         // 
         // label1
@@ -78,16 +75,6 @@ partial class LoginForm
         txtPwd.Size = new Size(198, 24);
         txtPwd.TabIndex = 3;
         // 
-        // button1
-        // 
-        button1.Location = new Point(63, 118);
-        button1.Name = "button1";
-        button1.Size = new Size(198, 38);
-        button1.TabIndex = 5;
-        button1.Text = "登录";
-        button1.UseVisualStyleBackColor = true;
-        button1.Click += OnLogin_Click;
-        // 
         // label3
         // 
         label3.AutoSize = true;
@@ -98,33 +85,30 @@ partial class LoginForm
         label3.TabIndex = 6;
         label3.Text = "版权所有©smsmpanda";
         // 
-        // uC_TextBox1
+        // button1
         // 
-        uC_TextBox1.BackColor = Color.WhiteSmoke;
-        uC_TextBox1.BorderStyle = BorderStyle.FixedSingle;
-        uC_TextBox1.Location = new Point(0, 0);
-        uC_TextBox1.Name = "uC_TextBox1";
-        uC_TextBox1.Size = new Size(255, 46);
-        uC_TextBox1.TabIndex = 7;
-        // 
-        // uC_TextBoxPadding1
-        // 
-        uC_TextBoxPadding1.BorderStyle = BorderStyle.FixedSingle;
-        uC_TextBoxPadding1.Location = new Point(0, 0);
-        uC_TextBoxPadding1.Name = "uC_TextBoxPadding1";
-        uC_TextBoxPadding1.Padding = new Padding(15);
-        uC_TextBoxPadding1.Size = new Size(317, 47);
-        uC_TextBoxPadding1.TabIndex = 9;
-        // 
-        // uC_TextBox2
-        // 
-        uC_TextBox2.BackColor = Color.WhiteSmoke;
-        uC_TextBox2.BorderStyle = BorderStyle.FixedSingle;
-        uC_TextBox2.Location = new Point(8, 8);
-        uC_TextBox2.Name = "uC_TextBox2";
-        uC_TextBox2.Size = new Size(255, 46);
-        uC_TextBox2.TabIndex = 10;
-        
+        button1.BtnBackColor = Color.FromArgb(9, 105, 218);
+        button1.BtnFont = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+        button1.BtnForeColor = Color.White;
+        button1.BtnText = "登录";
+        button1.ConerRadius = 5;
+        button1.Cursor = Cursors.Hand;
+        button1.EnabledMouseEffect = true;
+        button1.FillColor = Color.FromArgb(9, 105, 218);
+        button1.IsRadius = true;
+        button1.IsShowRect = true;
+        button1.IsShowTips = false;
+        button1.Location = new Point(63, 117);
+        button1.Name = "button1";
+        button1.RectColor = Color.FromArgb(9, 105, 218);
+        button1.RectWidth = 1;
+        button1.Size = new Size(198, 38);
+        button1.TabIndex = 7;
+        button1.TabStop = false;
+        button1.TipForeColor = Color.Black;
+        button1.TipsColor = Color.FromArgb(232, 30, 99);
+        button1.TipsText = "99+";
+        button1.BtnClick += OnLogin_Click;
         // 
         // LoginForm
         // 
@@ -134,11 +118,8 @@ partial class LoginForm
         BackColor = Color.White;
         BackgroundImageLayout = ImageLayout.Stretch;
         ClientSize = new Size(290, 201);
-        Controls.Add(uC_TextBox2);
-        Controls.Add(uC_TextBoxPadding1);
-        Controls.Add(uC_TextBox1);
-        Controls.Add(label3);
         Controls.Add(button1);
+        Controls.Add(label3);
         Controls.Add(txtPwd);
         Controls.Add(txtAccount);
         Controls.Add(label2);
@@ -158,9 +139,6 @@ partial class LoginForm
     private Label label2;
     private TextBox txtAccount;
     private TextBox txtPwd;
-    private Button button1;
     private Label label3;
-    private UserControls.UC_TextBox uC_TextBox1;
-    private UserControls.UC_TextBoxPadding uC_TextBoxPadding1;
-    private UserControls.UC_TextBox uC_TextBox2;
+    private Controls.Btn.UCBtnExt button1;
 }

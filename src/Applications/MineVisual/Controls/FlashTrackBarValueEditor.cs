@@ -7,12 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms.Design;
 
-namespace MineVisual.UserControls
+namespace MineVisual.Controls
 {
     public class FlashTrackBarValueEditor : System.Drawing.Design.UITypeEditor
     {
 
-        private IWindowsFormsEditorService edSvc = null;
+        private IWindowsFormsEditorService? edSvc = null;
 
         protected virtual void SetEditorProps(FlashTrackBar editingInstance, FlashTrackBar editor)
         {

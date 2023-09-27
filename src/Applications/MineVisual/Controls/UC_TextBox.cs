@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MineVisual.UserControls
+namespace MineVisual.Controls
 {
     public partial class UC_TextBox : UserControl
     {

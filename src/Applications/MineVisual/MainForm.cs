@@ -1,4 +1,4 @@
-﻿using MineVisual.UserControls;
+﻿using MineVisual.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -66,12 +66,11 @@ namespace MineVisual
 
         private void AddArcExample(PaintEventArgs e)
         {
-
             // Create a GraphicsPath object.
             GraphicsPath myPath = new GraphicsPath();
 
             // Set up and call AddArc, and close the figure.
-            Rectangle rect = new Rectangle(20, 20, 50, 50);
+            Rectangle rect = new Rectangle(500, 500, 300, 80);
             //myPath.AddArc(rect, 180, 90);
             //myPath.AddArc(rect, 270, 90);
             //myPath.AddArc(rect, 360, 90);
@@ -85,11 +84,13 @@ namespace MineVisual
             var s4 = rect.Bottom;
             var s5 = rect.Left;
 
-            myPath = GetRoundedRectPath(rect, 4);
+            myPath = GetRoundedRectPath(rect, 10);
 
             // Draw the path to screen.
-            e.Graphics.FillRectangle(new SolidBrush(Color.Black), rect);
-            e.Graphics.DrawPath(new Pen(Color.Red, 3), myPath);
+            //e.Graphics.FillRectangle(new SolidBrush(Color.Black), rect);
+            e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
+            e.Graphics.FillPath(new SolidBrush(Color.Blue), myPath);
+            e.Graphics.DrawPath(new Pen(Color.Red, 1), myPath);
         }
 
         private GraphicsPath GetRoundedRectPath(Rectangle rect, int radius)
@@ -542,6 +543,11 @@ namespace MineVisual
         }
 
         private void baseButton1_ButtonClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Test");
+        }
+
+        private void ucBtnExt1_BtnClick(object sender, EventArgs e)
         {
             MessageBox.Show("Test");
         }

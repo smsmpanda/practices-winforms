@@ -1,4 +1,5 @@
-﻿using System;
+﻿#nullable disable
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -8,11 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MineVisual.UserControls
+namespace MineVisual.Controls
 {
     public class FlashTrackBar : System.Windows.Forms.Control
     {
-        private System.ComponentModel.Container components;
+        private System.ComponentModel.Container? components;
 
         private const int LeftRightBorder = 10;
         private int value = 0;
@@ -27,8 +28,8 @@ namespace MineVisual.UserControls
         private Color startColor = Color.Red;
         private Color endColor = Color.LimeGreen;
         private EventHandler onValueChanged;
-        private Brush baseBackground = null;
-        private Brush backgroundDim = null;
+        private Brush? baseBackground = null;
+        private Brush? backgroundDim = null;
         private byte darkenBy = 200;
 
         public FlashTrackBar()

@@ -1,4 +1,4 @@
-﻿namespace MineVisual.UserControls
+﻿namespace MineVisual.Controls
 {
     partial class UC_TextBox
     {
