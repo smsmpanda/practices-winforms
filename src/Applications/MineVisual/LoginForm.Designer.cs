@@ -91,7 +91,7 @@ partial class LoginForm
         button1.BtnFont = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
         button1.BtnForeColor = Color.White;
         button1.BtnText = "登录";
-        button1.ConerRadius = 5;
+        button1.ConerRadius = 9;
         button1.Cursor = Cursors.Hand;
         button1.EnabledMouseEffect = true;
         button1.FillColor = Color.FromArgb(9, 105, 218);
@@ -107,7 +107,7 @@ partial class LoginForm
         button1.TabStop = false;
         button1.TipForeColor = Color.Black;
         button1.TipsColor = Color.FromArgb(232, 30, 99);
-        button1.TipsText = "99+";
+        button1.TipsText = "";
         button1.BtnClick += OnLogin_Click;
         // 
         // LoginForm

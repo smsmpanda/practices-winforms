@@ -549,7 +549,12 @@ namespace MineVisual
 
         private void ucBtnExt1_BtnClick(object sender, EventArgs e)
         {
-            MessageBox.Show("Test");
+            LoginForm loginForm = new LoginForm();
+            DialogResult dialog = loginForm.ShowDialog();
+            if (dialog == DialogResult.OK)
+            {
+                loginForm.Close();
+            }
         }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -182,6 +183,7 @@ namespace MineVisual.Controls.Btn
             lbl.Name = "lbl";
             lbl.Size = new Size(147, 64);
             lbl.TabIndex = 0;
+            lbl.Cursor = Cursors.Hand;
             lbl.Text = "自定义按钮";
             lbl.TextAlign = ContentAlignment.MiddleCenter;
             lbl.MouseDown += lbl_MouseDown;
