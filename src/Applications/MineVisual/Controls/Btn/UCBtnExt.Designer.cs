@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace MineVisual.Controls.Btn
 {
-    partial class UCBtnFillet
+    partial class UCBtnExt
     {
+
         /// <summary>
         /// 必需的设计器变量。
         /// </summary>
@@ -25,45 +26,58 @@ namespace MineVisual.Controls.Btn
             }
             base.Dispose(disposing);
         }
+
         private void InitializeComponent()
         {
             lbl = new Label();
+            lblTips = new Label();
             SuspendLayout();
             // 
             // lbl
             // 
+            lbl.BackColor = Color.Transparent;
             lbl.Cursor = Cursors.Hand;
             lbl.Dock = DockStyle.Fill;
-            lbl.Font = new Font("微软雅黑", 18F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbl.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lbl.ForeColor = Color.White;
-            lbl.Image = Properties.Resources.basket;
             lbl.ImageAlign = ContentAlignment.MiddleLeft;
             lbl.Location = new Point(0, 0);
             lbl.Name = "lbl";
-            lbl.Padding = new Padding(5, 0, 0, 0);
-            lbl.Size = new Size(120, 76);
+            lbl.Size = new Size(147, 64);
             lbl.TabIndex = 0;
-            lbl.Text = "按钮1   ";
-            lbl.TextAlign = ContentAlignment.MiddleRight;
+            lbl.Text = "自定义按钮";
+            lbl.TextAlign = ContentAlignment.MiddleCenter;
             lbl.MouseDown += lbl_MouseDown;
             // 
-            // UCBtnFillet
+            // lblTips
             // 
-            AutoScaleMode = AutoScaleMode.None;
-            BackColor = Color.Transparent;
+            lblTips.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTips.BackColor = Color.Transparent;
+            lblTips.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTips.ForeColor = Color.White;
+            lblTips.Location = new Point(120, 0);
+            lblTips.Name = "lblTips";
+            lblTips.Size = new Size(24, 24);
+            lblTips.TabIndex = 1;
+            lblTips.TextAlign = ContentAlignment.MiddleCenter;
+            lblTips.Visible = false;
+            lblTips.Paint += lblTips_Paint;
+            // 
+            // UCBtnExt
+            // 
             ConerRadius = 5;
+            Controls.Add(lblTips);
             Controls.Add(lbl);
-            FillColor = Color.DodgerBlue;
+            FillColor = Color.FromArgb(255, 77, 59);
             IsRadius = true;
             IsShowRectBorder = true;
-            Name = "UCBtnFillet";
-            Size = new Size(120, 76);
+            Name = "UCBtnExt";
+            RectBorderColor = Color.FromArgb(255, 77, 59);
+            Size = new Size(147, 64);
             ResumeLayout(false);
         }
 
-        /// <summary>
-        /// The label
-        /// </summary>
-        private Label lbl;
+        public Label lbl;
+        public Label lblTips;
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace MineVisual.Controls.Btn
 {
     [DefaultEvent(nameof(BtnClick))]
-    public class UCBtnExt : UCControlBase
+    public partial class UCBtnExt : UCControlBase
     {
         /// <summary>
         /// 按钮点击事件
@@ -85,7 +85,7 @@ namespace MineVisual.Controls.Btn
         /// <summary>
         /// The button back color
         /// </summary>
-        private Color _btnBackColor = Color.White;
+        private Color _btnBackColor = Color.Blue;
         /// <summary>
         /// 按钮背景色
         /// </summary>
@@ -98,7 +98,6 @@ namespace MineVisual.Controls.Btn
             {
                 _btnBackColor = value;
                 this.lbl.BackColor = value;
-                Refresh();
             }
         }
 
@@ -144,9 +143,6 @@ namespace MineVisual.Controls.Btn
         /// The button text
         /// </summary>
         private string _btnText;
-        private Label lbl;
-        private Label lblTips;
-
         /// <summary>
         /// 按钮文字
         /// </summary>
@@ -167,55 +163,7 @@ namespace MineVisual.Controls.Btn
         /// </summary>
         private Color m_tipsColor = Color.FromArgb(232, 30, 99);
 
-        private void InitializeComponent()
-        {
-            lbl = new Label();
-            lblTips = new Label();
-            SuspendLayout();
-            // 
-            // lbl
-            // 
-            lbl.BackColor = Color.Transparent;
-            lbl.Dock = DockStyle.Fill;
-            lbl.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl.ForeColor = Color.White;
-            lbl.Location = new Point(0, 0);
-            lbl.Name = "lbl";
-            lbl.Size = new Size(147, 64);
-            lbl.TabIndex = 0;
-            lbl.Cursor = Cursors.Hand;
-            lbl.Text = "自定义按钮";
-            lbl.TextAlign = ContentAlignment.MiddleCenter;
-            lbl.MouseDown += lbl_MouseDown;
-            // 
-            // lblTips
-            // 
-            lblTips.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblTips.BackColor = Color.Transparent;
-            lblTips.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTips.ForeColor = Color.White;
-            lblTips.Location = new Point(120, 0);
-            lblTips.Name = "lblTips";
-            lblTips.Size = new Size(24, 24);
-            lblTips.TabIndex = 1;
-            lblTips.Text = "99+";
-            lblTips.TextAlign = ContentAlignment.MiddleCenter;
-            lblTips.Visible = false;
-            lblTips.Paint += lblTips_Paint;
-            // 
-            // UCBtnExt
-            // 
-            ConerRadius = 5;
-            Controls.Add(lblTips);
-            Controls.Add(lbl);
-            FillColor = Color.FromArgb(255, 77, 59);
-            IsRadius = true;
-            IsShowRect = true;
-            Name = "UCBtnExt";
-            RectColor = Color.FromArgb(255, 77, 59);
-            Size = new Size(147, 64);
-            ResumeLayout(false);
-        }
+
 
         /// <summary>
         /// 角标颜色

@@ -96,12 +96,12 @@ partial class LoginForm
         button1.EnabledMouseEffect = true;
         button1.FillColor = Color.FromArgb(9, 105, 218);
         button1.IsRadius = true;
-        button1.IsShowRect = true;
+        button1.IsShowRectBorder = true;
         button1.IsShowTips = false;
         button1.Location = new Point(63, 117);
         button1.Name = "button1";
-        button1.RectColor = Color.FromArgb(9, 105, 218);
-        button1.RectWidth = 1;
+        button1.RectBorderColor = Color.FromArgb(9, 105, 218);
+        button1.RectBorderWidth = 1;
         button1.Size = new Size(198, 38);
         button1.TabIndex = 7;
         button1.TabStop = false;

@@ -28,7 +28,7 @@ namespace MineVisual.Controls
         /// <summary>
         /// The is show rect
         /// </summary>
-        private bool _isShowRect = false;
+        private bool _isShowRectBorder = false;
 
         /// <summary>
         /// The rect color
@@ -62,7 +62,7 @@ namespace MineVisual.Controls
         /// </summary>
         /// <value>The color of the rect.</value>
         [Description("边框颜色"), Category("自定义")]
-        public virtual Color RectColor
+        public virtual Color RectBorderColor
         {
             get => _rectColor;
             set
@@ -77,7 +77,7 @@ namespace MineVisual.Controls
         /// </summary>
         /// <value>The width of the rect.</value>
         [Description("边框宽度"), Category("自定义")]
-        public virtual int RectWidth
+        public virtual int RectBorderWidth
         {
             get => _rectWidth;
             set
@@ -122,12 +122,12 @@ namespace MineVisual.Controls
         /// </summary>
         /// <value><c>true</c> if this instance is show rect; otherwise, <c>false</c>.</value>
         [Description("是否显示边框"), Category("自定义")]
-        public virtual bool IsShowRect
+        public virtual bool IsShowRectBorder
         {
-            get => _isShowRect;
+            get => _isShowRectBorder;
             set
             {
-                _isShowRect = value;
+                _isShowRectBorder = value;
                 Refresh();
             }
         }
@@ -150,7 +150,7 @@ namespace MineVisual.Controls
                 }
 
                 GraphicsPath graphicsPath = new GraphicsPath();
-                if (_isShowRect || (_fillColor != Color.Empty && _fillColor != Color.Transparent && _fillColor != this.BackColor))
+                if (_isShowRectBorder || (_fillColor != Color.Empty && _fillColor != Color.Transparent && _fillColor != this.BackColor))
                 {
                     Rectangle clientRectangle = base.ClientRectangle;
                     if (_isRadius)
@@ -169,7 +169,7 @@ namespace MineVisual.Controls
                 e.Graphics.SetGDIHigh();
                 if (_fillColor != Color.Empty && _fillColor != Color.Transparent && _fillColor != this.BackColor)
                     e.Graphics.FillPath(new SolidBrush(_fillColor), graphicsPath);
-                if (_isShowRect)
+                if (_isShowRectBorder)
                 {
                     Color rectColor = _rectColor;
                     Pen pen = new Pen(rectColor, (float)_rectWidth);
@@ -205,6 +205,17 @@ namespace MineVisual.Controls
             graphicsPath.AddArc(rect2, 90f, 90f);//左下角
             graphicsPath.CloseFigure();
             return graphicsPath;
+        }
+
+        public UCControlBase()
+        {
+            this.InitializeComponent();
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.DoubleBuffer, true);
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            this.SetStyle(ControlStyles.Selectable, true);
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
         }
     }
 }

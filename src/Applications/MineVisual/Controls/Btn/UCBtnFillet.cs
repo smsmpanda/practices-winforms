@@ -15,22 +15,24 @@ namespace MineVisual.Controls.Btn
         /// </summary>
         [Description("按钮点击事件"), Category("自定义")]
         public event EventHandler BtnClick;
+
         /// <summary>
-        /// 按钮图片
+        /// 图片
         /// </summary>
-        /// <value>The BTN image.</value>
-        [Description("按钮图片"), Category("自定义")]
-        public Image BtnImage
+        /// <value>The image.</value>
+        [Description("图片"), Category("自定义")]
+        public virtual Image Image
         {
             get
             {
-                return pic.Image;
+                return this.lbl.Image;
             }
             set
             {
-                pic.Image = value;
+                this.lbl.Image = value;
             }
         }
+
         /// <summary>
         /// 按钮文字
         /// </summary>
