@@ -29,14 +29,17 @@ namespace MineVisual.Controls
 
         private void InitializeComponent()
         {
-            SuspendLayout();
+            this.SuspendLayout();
             // 
             // UCControlBase
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UCControlBase";
-            ResumeLayout(false);
+            this.Size = new System.Drawing.Size(237, 154);
+            this.ResumeLayout(false);
         }
     }
 }

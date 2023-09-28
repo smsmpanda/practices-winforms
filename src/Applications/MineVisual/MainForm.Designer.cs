@@ -31,148 +31,187 @@ namespace MineVisual
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            uC_TextBox2 = new Controls.UC_TextBox();
-            btnDrawArc = new Button();
-            firstControl1 = new Controls.FirstControl();
-            flashTrackBar1 = new Controls.FlashTrackBar();
-            dateTimePicker1 = new DateTimePicker();
-            ucBtnExt1 = new UCBtnExt();
-            ucBtnExt2 = new UCBtnExt();
-            ucBtnFillet1 = new UCBtnFillet();
-            SuspendLayout();
+            this.uC_TextBox2 = new MineVisual.Controls.UC_TextBox();
+            this.btnDrawArc = new System.Windows.Forms.Button();
+            this.firstControl1 = new MineVisual.Controls.FirstControl();
+            this.flashTrackBar1 = new MineVisual.Controls.FlashTrackBar();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ucBtnExt1 = new MineVisual.Controls.Btn.UCBtnExt();
+            this.ucBtnExt2 = new MineVisual.Controls.Btn.UCBtnExt();
+            this.ucBtnFillet1 = new MineVisual.Controls.Btn.UCBtnFillet();
+            this.ucBtnImage1 = new MineVisual.Controls.Btn.UCBtnImage();
+            this.SuspendLayout();
             // 
             // uC_TextBox2
             // 
-            uC_TextBox2.BackColor = Color.White;
-            uC_TextBox2.BorderStyle = BorderStyle.FixedSingle;
-            uC_TextBox2.IsRound = false;
-            uC_TextBox2.Location = new Point(621, 100);
-            uC_TextBox2.Name = "uC_TextBox2";
-            uC_TextBox2.Size = new Size(255, 46);
-            uC_TextBox2.TabIndex = 2;
+            this.uC_TextBox2.BackColor = System.Drawing.Color.White;
+            this.uC_TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uC_TextBox2.IsRound = false;
+            this.uC_TextBox2.Location = new System.Drawing.Point(621, 100);
+            this.uC_TextBox2.Name = "uC_TextBox2";
+            this.uC_TextBox2.Size = new System.Drawing.Size(255, 46);
+            this.uC_TextBox2.TabIndex = 2;
             // 
             // btnDrawArc
             // 
-            btnDrawArc.Location = new Point(621, 165);
-            btnDrawArc.Name = "btnDrawArc";
-            btnDrawArc.Size = new Size(75, 23);
-            btnDrawArc.TabIndex = 3;
-            btnDrawArc.Text = "画弧线";
-            btnDrawArc.UseVisualStyleBackColor = true;
+            this.btnDrawArc.Location = new System.Drawing.Point(621, 165);
+            this.btnDrawArc.Name = "btnDrawArc";
+            this.btnDrawArc.Size = new System.Drawing.Size(75, 23);
+            this.btnDrawArc.TabIndex = 3;
+            this.btnDrawArc.Text = "画弧线";
+            this.btnDrawArc.UseVisualStyleBackColor = true;
             // 
             // firstControl1
             // 
-            firstControl1.Location = new Point(719, 165);
-            firstControl1.Name = "firstControl1";
-            firstControl1.Size = new Size(147, 27);
-            firstControl1.TabIndex = 4;
-            firstControl1.Text = "firstControl1";
-            firstControl1.TextAlignment = ContentAlignment.MiddleCenter;
+            this.firstControl1.Location = new System.Drawing.Point(719, 165);
+            this.firstControl1.Name = "firstControl1";
+            this.firstControl1.Size = new System.Drawing.Size(147, 27);
+            this.firstControl1.TabIndex = 4;
+            this.firstControl1.Text = "firstControl1";
+            this.firstControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flashTrackBar1
             // 
-            flashTrackBar1.BackColor = Color.Black;
-            flashTrackBar1.ForeColor = Color.White;
-            flashTrackBar1.Location = new Point(621, 217);
-            flashTrackBar1.Max = 1000;
-            flashTrackBar1.Name = "flashTrackBar1";
-            flashTrackBar1.ShowPercentage = true;
-            flashTrackBar1.Size = new Size(100, 23);
-            flashTrackBar1.TabIndex = 5;
-            flashTrackBar1.Text = "flashTrackBar1";
-            flashTrackBar1.Value = 10;
+            this.flashTrackBar1.BackColor = System.Drawing.Color.Black;
+            this.flashTrackBar1.ForeColor = System.Drawing.Color.White;
+            this.flashTrackBar1.Location = new System.Drawing.Point(621, 217);
+            this.flashTrackBar1.Max = 1000;
+            this.flashTrackBar1.Name = "flashTrackBar1";
+            this.flashTrackBar1.ShowPercentage = true;
+            this.flashTrackBar1.Size = new System.Drawing.Size(100, 23);
+            this.flashTrackBar1.TabIndex = 5;
+            this.flashTrackBar1.Text = "flashTrackBar1";
+            this.flashTrackBar1.Value = 10;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(621, 276);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.Location = new System.Drawing.Point(621, 276);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 7;
             // 
             // ucBtnExt1
             // 
-            ucBtnExt1.BackColor = Color.Red;
-            ucBtnExt1.BtnBackColor = Color.FromArgb(9, 105, 218);
-            ucBtnExt1.BtnFont = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ucBtnExt1.BtnForeColor = Color.White;
-            ucBtnExt1.BtnText = "搜索";
-            ucBtnExt1.ConerRadius = 10;
-            ucBtnExt1.EnabledMouseEffect = true;
-            ucBtnExt1.FillColor = Color.FromArgb(9, 105, 218);
-            ucBtnExt1.IsRadius = true;
-            ucBtnExt1.IsShowRectBorder = true;
-            ucBtnExt1.IsShowTips = true;
-            ucBtnExt1.Location = new Point(467, 25);
-            ucBtnExt1.Name = "ucBtnExt1";
-            ucBtnExt1.RectBorderColor = Color.FromArgb(9, 105, 218);
-            ucBtnExt1.RectBorderWidth = 1;
-            ucBtnExt1.Size = new Size(99, 47);
-            ucBtnExt1.TabIndex = 8;
-            ucBtnExt1.TabStop = false;
-            ucBtnExt1.TipForeColor = Color.White;
-            ucBtnExt1.TipsColor = Color.FromArgb(255, 128, 0);
-            ucBtnExt1.TipsText = "9";
-            ucBtnExt1.BtnClick += ucBtnExt1_BtnClick;
+            this.ucBtnExt1.BackColor = System.Drawing.Color.Red;
+            this.ucBtnExt1.BtnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(105)))), ((int)(((byte)(218)))));
+            this.ucBtnExt1.BtnFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ucBtnExt1.BtnForeColor = System.Drawing.Color.White;
+            this.ucBtnExt1.BtnText = "搜索";
+            this.ucBtnExt1.ConerRadius = 10;
+            this.ucBtnExt1.EnabledMouseEffect = true;
+            this.ucBtnExt1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(105)))), ((int)(((byte)(218)))));
+            this.ucBtnExt1.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ucBtnExt1.IsRadius = true;
+            this.ucBtnExt1.IsShowRectBorder = true;
+            this.ucBtnExt1.IsShowTips = true;
+            this.ucBtnExt1.Location = new System.Drawing.Point(467, 25);
+            this.ucBtnExt1.Margin = new System.Windows.Forms.Padding(0);
+            this.ucBtnExt1.Name = "ucBtnExt1";
+            this.ucBtnExt1.RectBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(105)))), ((int)(((byte)(218)))));
+            this.ucBtnExt1.RectBorderWidth = 1;
+            this.ucBtnExt1.Size = new System.Drawing.Size(99, 47);
+            this.ucBtnExt1.TabIndex = 8;
+            this.ucBtnExt1.TabStop = false;
+            this.ucBtnExt1.TipForeColor = System.Drawing.Color.White;
+            this.ucBtnExt1.TipsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ucBtnExt1.TipsText = "9";
             // 
             // ucBtnExt2
             // 
-            ucBtnExt2.BtnBackColor = Color.FromArgb(255, 77, 59);
-            ucBtnExt2.BtnFont = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ucBtnExt2.BtnForeColor = Color.White;
-            ucBtnExt2.BtnText = "退出";
-            ucBtnExt2.ConerRadius = 10;
-            ucBtnExt2.EnabledMouseEffect = false;
-            ucBtnExt2.FillColor = Color.FromArgb(255, 77, 59);
-            ucBtnExt2.IsRadius = true;
-            ucBtnExt2.IsShowRectBorder = true;
-            ucBtnExt2.IsShowTips = true;
-            ucBtnExt2.Location = new Point(610, 25);
-            ucBtnExt2.Name = "ucBtnExt2";
-            ucBtnExt2.RectBorderColor = Color.FromArgb(255, 77, 59);
-            ucBtnExt2.RectBorderWidth = 1;
-            ucBtnExt2.Size = new Size(111, 52);
-            ucBtnExt2.TabIndex = 12;
-            ucBtnExt2.TabStop = false;
-            ucBtnExt2.TipForeColor = Color.White;
-            ucBtnExt2.TipsColor = Color.FromArgb(255, 128, 0);
-            ucBtnExt2.TipsText = "9";
+            this.ucBtnExt2.BackColor = System.Drawing.Color.Transparent;
+            this.ucBtnExt2.BtnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.ucBtnExt2.BtnFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ucBtnExt2.BtnForeColor = System.Drawing.Color.White;
+            this.ucBtnExt2.BtnText = "退出";
+            this.ucBtnExt2.ConerRadius = 10;
+            this.ucBtnExt2.EnabledMouseEffect = false;
+            this.ucBtnExt2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.ucBtnExt2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ucBtnExt2.IsRadius = true;
+            this.ucBtnExt2.IsShowRectBorder = true;
+            this.ucBtnExt2.IsShowTips = true;
+            this.ucBtnExt2.Location = new System.Drawing.Point(610, 25);
+            this.ucBtnExt2.Margin = new System.Windows.Forms.Padding(0);
+            this.ucBtnExt2.Name = "ucBtnExt2";
+            this.ucBtnExt2.RectBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.ucBtnExt2.RectBorderWidth = 1;
+            this.ucBtnExt2.Size = new System.Drawing.Size(111, 52);
+            this.ucBtnExt2.TabIndex = 12;
+            this.ucBtnExt2.TabStop = false;
+            this.ucBtnExt2.TipForeColor = System.Drawing.Color.White;
+            this.ucBtnExt2.TipsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ucBtnExt2.TipsText = "9";
             // 
             // ucBtnFillet1
             // 
-            ucBtnFillet1.BackColor = Color.Transparent;
-            ucBtnFillet1.BtnForeColor = Color.Transparent;
-            ucBtnFillet1.BtnText = "按钮1   ";
-            ucBtnFillet1.ConerRadius = 5;
-            ucBtnFillet1.FillColor = Color.FromArgb(9, 105, 218);
-            ucBtnFillet1.Image = (Image)resources.GetObject("ucBtnFillet1.Image");
-            ucBtnFillet1.IsRadius = false;
-            ucBtnFillet1.IsShowRectBorder = true;
-            ucBtnFillet1.Location = new Point(467, 100);
-            ucBtnFillet1.Name = "ucBtnFillet1";
-            ucBtnFillet1.RectBorderColor = Color.FromArgb(220, 220, 220);
-            ucBtnFillet1.RectBorderWidth = 1;
-            ucBtnFillet1.Size = new Size(118, 40);
-            ucBtnFillet1.TabIndex = 13;
+            this.ucBtnFillet1.BackColor = System.Drawing.Color.Transparent;
+            this.ucBtnFillet1.BtnForeColor = System.Drawing.Color.Transparent;
+            this.ucBtnFillet1.BtnText = "按钮1   ";
+            this.ucBtnFillet1.ConerRadius = 9;
+            this.ucBtnFillet1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(105)))), ((int)(((byte)(218)))));
+            this.ucBtnFillet1.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ucBtnFillet1.Image = ((System.Drawing.Image)(resources.GetObject("ucBtnFillet1.Image")));
+            this.ucBtnFillet1.IsRadius = true;
+            this.ucBtnFillet1.IsShowRectBorder = true;
+            this.ucBtnFillet1.Location = new System.Drawing.Point(467, 100);
+            this.ucBtnFillet1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ucBtnFillet1.Name = "ucBtnFillet1";
+            this.ucBtnFillet1.RectBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.ucBtnFillet1.RectBorderWidth = 1;
+            this.ucBtnFillet1.Size = new System.Drawing.Size(118, 40);
+            this.ucBtnFillet1.TabIndex = 13;
+            // 
+            // ucBtnImage1
+            // 
+            this.ucBtnImage1.BackColor = System.Drawing.Color.Transparent;
+            this.ucBtnImage1.BtnBackColor = System.Drawing.Color.Transparent;
+            this.ucBtnImage1.BtnFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ucBtnImage1.BtnForeColor = System.Drawing.Color.White;
+            this.ucBtnImage1.BtnText = "";
+            this.ucBtnImage1.ConerRadius = 5;
+            this.ucBtnImage1.EnabledMouseEffect = false;
+            this.ucBtnImage1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.ucBtnImage1.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ucBtnImage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.ucBtnImage1.Image = global::MineVisual.Properties.Resources.basket;
+            this.ucBtnImage1.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ucBtnImage1.IsRadius = true;
+            this.ucBtnImage1.IsShowRectBorder = true;
+            this.ucBtnImage1.IsShowTips = true;
+            this.ucBtnImage1.Location = new System.Drawing.Point(629, 339);
+            this.ucBtnImage1.Margin = new System.Windows.Forms.Padding(0);
+            this.ucBtnImage1.Name = "ucBtnImage1";
+            this.ucBtnImage1.RectBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(58)))));
+            this.ucBtnImage1.RectBorderWidth = 1;
+            this.ucBtnImage1.Size = new System.Drawing.Size(92, 49);
+            this.ucBtnImage1.TabIndex = 14;
+            this.ucBtnImage1.TabStop = false;
+            this.ucBtnImage1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ucBtnImage1.TipForeColor = System.Drawing.Color.Black;
+            this.ucBtnImage1.TipsColor = System.Drawing.Color.White;
+            this.ucBtnImage1.TipsText = "9+";
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(1107, 733);
-            Controls.Add(ucBtnFillet1);
-            Controls.Add(ucBtnExt2);
-            Controls.Add(ucBtnExt1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(flashTrackBar1);
-            Controls.Add(firstControl1);
-            Controls.Add(btnDrawArc);
-            Controls.Add(uC_TextBox2);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "MainForm";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "MainForm";
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1107, 733);
+            this.Controls.Add(this.ucBtnImage1);
+            this.Controls.Add(this.ucBtnFillet1);
+            this.Controls.Add(this.ucBtnExt2);
+            this.Controls.Add(this.ucBtnExt1);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.flashTrackBar1);
+            this.Controls.Add(this.firstControl1);
+            this.Controls.Add(this.btnDrawArc);
+            this.Controls.Add(this.uC_TextBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MainForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -184,5 +223,6 @@ namespace MineVisual
         private UCBtnExt ucBtnExt1;
         private UCBtnExt ucBtnExt2;
         private UCBtnFillet ucBtnFillet1;
+        private UCBtnImage ucBtnImage1;
     }
 }

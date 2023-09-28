@@ -85,7 +85,7 @@ namespace MineVisual.Controls.Btn
         /// <summary>
         /// The button back color
         /// </summary>
-        private Color _btnBackColor = Color.Blue;
+        private Color _btnBackColor = Color.Transparent;
         /// <summary>
         /// 按钮背景色
         /// </summary>
