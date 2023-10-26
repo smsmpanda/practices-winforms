@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0E94B59E-A2E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MineVisual", "src\Applications\MineVisual\MineVisual.csproj", "{CE7D98D8-9247-42E0-A051-66AE1D364439}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinformCase", "src\Applications\WinformCase\WinformCase.csproj", "{37DAD940-9792-41A8-B539-9966AD17FE2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 		{CE7D98D8-9247-42E0-A051-66AE1D364439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE7D98D8-9247-42E0-A051-66AE1D364439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE7D98D8-9247-42E0-A051-66AE1D364439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37DAD940-9792-41A8-B539-9966AD17FE2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37DAD940-9792-41A8-B539-9966AD17FE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37DAD940-9792-41A8-B539-9966AD17FE2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37DAD940-9792-41A8-B539-9966AD17FE2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CE7D98D8-9247-42E0-A051-66AE1D364439} = {0E94B59E-A2E9-43E7-BCB6-B4EF1C49E785}
+		{37DAD940-9792-41A8-B539-9966AD17FE2F} = {0E94B59E-A2E9-43E7-BCB6-B4EF1C49E785}
 	EndGlobalSection
 EndGlobal
