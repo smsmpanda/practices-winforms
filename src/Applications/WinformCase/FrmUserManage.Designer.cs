@@ -31,13 +31,19 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.checkStopWork = new System.Windows.Forms.CheckBox();
-            this.cbxBase = new System.Windows.Forms.ComboBox();
+            this.cbxBaseType = new System.Windows.Forms.ComboBox();
             this.lblShenfen = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvUser = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BaseType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AppraisalBase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsDel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -47,9 +53,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.checkStopWork);
-            this.groupBox1.Controls.Add(this.cbxBase);
+            this.groupBox1.Controls.Add(this.cbxBaseType);
             this.groupBox1.Controls.Add(this.lblShenfen);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.lblUserName);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -67,6 +73,7 @@
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "搜索";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // checkStopWork
             // 
@@ -78,13 +85,13 @@
             this.checkStopWork.Text = "已停职";
             this.checkStopWork.UseVisualStyleBackColor = true;
             // 
-            // cbxBase
+            // cbxBaseType
             // 
-            this.cbxBase.FormattingEnabled = true;
-            this.cbxBase.Location = new System.Drawing.Point(248, 33);
-            this.cbxBase.Name = "cbxBase";
-            this.cbxBase.Size = new System.Drawing.Size(121, 25);
-            this.cbxBase.TabIndex = 3;
+            this.cbxBaseType.FormattingEnabled = true;
+            this.cbxBaseType.Location = new System.Drawing.Point(248, 33);
+            this.cbxBaseType.Name = "cbxBaseType";
+            this.cbxBaseType.Size = new System.Drawing.Size(121, 25);
+            this.cbxBaseType.TabIndex = 3;
             // 
             // lblShenfen
             // 
@@ -95,12 +102,12 @@
             this.lblShenfen.TabIndex = 2;
             this.lblShenfen.Text = "身份";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(77, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtName.Location = new System.Drawing.Point(77, 33);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 23);
+            this.txtName.TabIndex = 1;
             // 
             // lblUserName
             // 
@@ -111,24 +118,64 @@
             this.lblUserName.TabIndex = 0;
             this.lblUserName.Text = "用户名";
             // 
-            // dataGridView1
+            // dgvUser
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 101);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 337);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.UserName,
+            this.Sex,
+            this.BaseType,
+            this.AppraisalBase,
+            this.IsDel});
+            this.dgvUser.Location = new System.Drawing.Point(12, 101);
+            this.dgvUser.Name = "dgvUser";
+            this.dgvUser.RowTemplate.Height = 25;
+            this.dgvUser.Size = new System.Drawing.Size(776, 337);
+            this.dgvUser.TabIndex = 1;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "编号";
+            this.Id.Name = "Id";
+            // 
+            // UserName
+            // 
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "用户名";
+            this.UserName.Name = "UserName";
+            // 
+            // Sex
+            // 
+            this.Sex.DataPropertyName = "Sex";
+            this.Sex.HeaderText = "性别";
+            this.Sex.Name = "Sex";
+            // 
+            // BaseType
+            // 
+            this.BaseType.DataPropertyName = "BaseType";
+            this.BaseType.HeaderText = "基数类型";
+            this.BaseType.Name = "BaseType";
+            // 
+            // AppraisalBase
+            // 
+            this.AppraisalBase.DataPropertyName = "AppraisalBase";
+            this.AppraisalBase.HeaderText = "基数";
+            this.AppraisalBase.Name = "AppraisalBase";
+            // 
+            // IsDel
+            // 
+            this.IsDel.DataPropertyName = "IsDel";
+            this.IsDel.HeaderText = "是否停职";
+            this.IsDel.Name = "IsDel";
             // 
             // FrmUserManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmUserManage";
@@ -137,7 +184,7 @@
             this.Load += new System.EventHandler(this.FrmUserManage_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -145,12 +192,18 @@
         #endregion
 
         private GroupBox groupBox1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvUser;
         private Label lblUserName;
         private Button btnSearch;
         private CheckBox checkStopWork;
-        private ComboBox cbxBase;
+        private ComboBox cbxBaseType;
         private Label lblShenfen;
-        private TextBox textBox1;
+        private TextBox txtName;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn UserName;
+        private DataGridViewTextBoxColumn Sex;
+        private DataGridViewTextBoxColumn BaseType;
+        private DataGridViewTextBoxColumn AppraisalBase;
+        private DataGridViewTextBoxColumn IsDel;
     }
 }
