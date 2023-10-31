@@ -65,5 +65,31 @@ namespace WinformCase
         {
             BindUserDataGridView();
         }
+
+        private void dgvUser_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right) 
+            { 
+                cmsUserAdd.Visible = true;
+                cmsUserDisable.Visible = false;
+                cmsUserEdit.Visible = false;
+                cmsUserEnable.Visible = false;
+            }
+        }
+
+        private void dgvUser_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (e.RowIndex > -1) 
+                {
+                    dgvUser.Rows[e.RowIndex].Selected = true;
+                    cmsUserAdd.Visible = true;
+                    cmsUserEdit.Visible= true;
+                    cmsUserDisable.Visible = false;
+                    cmsUserEnable.Visible = false;
+                }
+            }
+        }
     }
 }

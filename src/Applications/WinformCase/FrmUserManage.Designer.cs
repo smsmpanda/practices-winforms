@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.checkStopWork = new System.Windows.Forms.CheckBox();
@@ -42,8 +43,14 @@
             this.BaseType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AppraisalBase = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsDel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmsUserManage = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsUserAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsUserEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsUserEnable = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsUserDisable = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
+            this.cmsUserManage.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -120,6 +127,8 @@
             // 
             // dgvUser
             // 
+            this.dgvUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -128,11 +137,16 @@
             this.BaseType,
             this.AppraisalBase,
             this.IsDel});
+            this.dgvUser.ContextMenuStrip = this.cmsUserManage;
             this.dgvUser.Location = new System.Drawing.Point(12, 101);
+            this.dgvUser.MultiSelect = false;
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowTemplate.Height = 25;
+            this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUser.Size = new System.Drawing.Size(776, 337);
             this.dgvUser.TabIndex = 1;
+            this.dgvUser.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUser_CellMouseDown);
+            this.dgvUser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvUser_MouseDown);
             // 
             // Id
             // 
@@ -170,6 +184,40 @@
             this.IsDel.HeaderText = "是否停职";
             this.IsDel.Name = "IsDel";
             // 
+            // cmsUserManage
+            // 
+            this.cmsUserManage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsUserAdd,
+            this.cmsUserEdit,
+            this.cmsUserEnable,
+            this.cmsUserDisable});
+            this.cmsUserManage.Name = "cmsUserManage";
+            this.cmsUserManage.Size = new System.Drawing.Size(101, 92);
+            // 
+            // cmsUserAdd
+            // 
+            this.cmsUserAdd.Name = "cmsUserAdd";
+            this.cmsUserAdd.Size = new System.Drawing.Size(100, 22);
+            this.cmsUserAdd.Text = "新建";
+            // 
+            // cmsUserEdit
+            // 
+            this.cmsUserEdit.Name = "cmsUserEdit";
+            this.cmsUserEdit.Size = new System.Drawing.Size(100, 22);
+            this.cmsUserEdit.Text = "编辑";
+            // 
+            // cmsUserEnable
+            // 
+            this.cmsUserEnable.Name = "cmsUserEnable";
+            this.cmsUserEnable.Size = new System.Drawing.Size(100, 22);
+            this.cmsUserEnable.Text = "启用";
+            // 
+            // cmsUserDisable
+            // 
+            this.cmsUserDisable.Name = "cmsUserDisable";
+            this.cmsUserDisable.Size = new System.Drawing.Size(100, 22);
+            this.cmsUserDisable.Text = "停用";
+            // 
             // FrmUserManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -185,6 +233,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
+            this.cmsUserManage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -205,5 +254,10 @@
         private DataGridViewTextBoxColumn BaseType;
         private DataGridViewTextBoxColumn AppraisalBase;
         private DataGridViewTextBoxColumn IsDel;
+        private ContextMenuStrip cmsUserManage;
+        private ToolStripMenuItem cmsUserAdd;
+        private ToolStripMenuItem cmsUserEdit;
+        private ToolStripMenuItem cmsUserEnable;
+        private ToolStripMenuItem cmsUserDisable;
     }
 }
