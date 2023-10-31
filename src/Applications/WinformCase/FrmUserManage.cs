@@ -40,8 +40,10 @@ namespace WinformCase
             {
                 result = result.FindAll(u => u.BaseTypeId == baseType);
             }
+            if (isDel == 0) {
+                result = result.FindAll(u => u.IsDel == isDel);
+            }
 
-            result = result.FindAll(u => u.IsDel == isDel);
 
             dgvUser.AutoGenerateColumns = false;
             dgvUser.DataSource = result;
@@ -68,8 +70,8 @@ namespace WinformCase
 
         private void dgvUser_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right) 
-            { 
+            if (e.Button == MouseButtons.Right)
+            {
                 cmsUserAdd.Visible = true;
                 cmsUserDisable.Visible = false;
                 cmsUserEdit.Visible = false;
@@ -81,15 +83,35 @@ namespace WinformCase
         {
             if (e.Button == MouseButtons.Right)
             {
-                if (e.RowIndex > -1) 
+                if (e.RowIndex > -1)
                 {
                     dgvUser.Rows[e.RowIndex].Selected = true;
                     cmsUserAdd.Visible = true;
-                    cmsUserEdit.Visible= true;
-                    cmsUserDisable.Visible = false;
-                    cmsUserEnable.Visible = false;
+                    cmsUserEdit.Visible = true;
+
+                    int a = (int)dgvUser.SelectedRows[0].Cells["IsDel"].Value;
+                    if (a == 0)
+                    {
+                        cmsUserDisable.Visible = true;
+                    }
+                    else
+                    {
+                        cmsUserEnable.Visible = false;
+                    }
                 }
             }
+        }
+
+        private void cmsUserAdd_Click(object sender, EventArgs e)
+        {
+            FrmSetUser frmSetUser = new FrmSetUser();
+            frmSetUser.FeedBackParent += FrmSetUser_FeedBackParent; 
+            frmSetUser.ShowDialog();
+        }
+
+        private void FrmSetUser_FeedBackParent(object? sender, EventArgs e)
+        {
+            BindUserDataGridView();
         }
     }
 }

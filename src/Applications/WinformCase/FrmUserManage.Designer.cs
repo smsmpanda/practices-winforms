@@ -42,7 +42,7 @@
             this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BaseType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AppraisalBase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsDel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsDel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.cmsUserManage = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsUserAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsUserEdit = new System.Windows.Forms.ToolStripMenuItem();
@@ -127,6 +127,8 @@
             // 
             // dgvUser
             // 
+            this.dgvUser.AllowUserToAddRows = false;
+            this.dgvUser.AllowUserToDeleteRows = false;
             this.dgvUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -141,6 +143,7 @@
             this.dgvUser.Location = new System.Drawing.Point(12, 101);
             this.dgvUser.MultiSelect = false;
             this.dgvUser.Name = "dgvUser";
+            this.dgvUser.ReadOnly = true;
             this.dgvUser.RowTemplate.Height = 25;
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUser.Size = new System.Drawing.Size(776, 337);
@@ -153,36 +156,44 @@
             this.Id.DataPropertyName = "Id";
             this.Id.HeaderText = "编号";
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // UserName
             // 
             this.UserName.DataPropertyName = "UserName";
             this.UserName.HeaderText = "用户名";
             this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
             // 
             // Sex
             // 
             this.Sex.DataPropertyName = "Sex";
             this.Sex.HeaderText = "性别";
             this.Sex.Name = "Sex";
+            this.Sex.ReadOnly = true;
             // 
             // BaseType
             // 
             this.BaseType.DataPropertyName = "BaseType";
             this.BaseType.HeaderText = "基数类型";
             this.BaseType.Name = "BaseType";
+            this.BaseType.ReadOnly = true;
             // 
             // AppraisalBase
             // 
             this.AppraisalBase.DataPropertyName = "AppraisalBase";
             this.AppraisalBase.HeaderText = "基数";
             this.AppraisalBase.Name = "AppraisalBase";
+            this.AppraisalBase.ReadOnly = true;
             // 
             // IsDel
             // 
             this.IsDel.DataPropertyName = "IsDel";
             this.IsDel.HeaderText = "是否停职";
             this.IsDel.Name = "IsDel";
+            this.IsDel.ReadOnly = true;
+            this.IsDel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.IsDel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // cmsUserManage
             // 
@@ -192,30 +203,31 @@
             this.cmsUserEnable,
             this.cmsUserDisable});
             this.cmsUserManage.Name = "cmsUserManage";
-            this.cmsUserManage.Size = new System.Drawing.Size(101, 92);
+            this.cmsUserManage.Size = new System.Drawing.Size(181, 114);
             // 
             // cmsUserAdd
             // 
             this.cmsUserAdd.Name = "cmsUserAdd";
-            this.cmsUserAdd.Size = new System.Drawing.Size(100, 22);
+            this.cmsUserAdd.Size = new System.Drawing.Size(180, 22);
             this.cmsUserAdd.Text = "新建";
+            this.cmsUserAdd.Click += new System.EventHandler(this.cmsUserAdd_Click);
             // 
             // cmsUserEdit
             // 
             this.cmsUserEdit.Name = "cmsUserEdit";
-            this.cmsUserEdit.Size = new System.Drawing.Size(100, 22);
+            this.cmsUserEdit.Size = new System.Drawing.Size(180, 22);
             this.cmsUserEdit.Text = "编辑";
             // 
             // cmsUserEnable
             // 
             this.cmsUserEnable.Name = "cmsUserEnable";
-            this.cmsUserEnable.Size = new System.Drawing.Size(100, 22);
+            this.cmsUserEnable.Size = new System.Drawing.Size(180, 22);
             this.cmsUserEnable.Text = "启用";
             // 
             // cmsUserDisable
             // 
             this.cmsUserDisable.Name = "cmsUserDisable";
-            this.cmsUserDisable.Size = new System.Drawing.Size(100, 22);
+            this.cmsUserDisable.Size = new System.Drawing.Size(180, 22);
             this.cmsUserDisable.Text = "停用";
             // 
             // FrmUserManage
@@ -248,16 +260,16 @@
         private ComboBox cbxBaseType;
         private Label lblShenfen;
         private TextBox txtName;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn UserName;
-        private DataGridViewTextBoxColumn Sex;
-        private DataGridViewTextBoxColumn BaseType;
-        private DataGridViewTextBoxColumn AppraisalBase;
-        private DataGridViewTextBoxColumn IsDel;
         private ContextMenuStrip cmsUserManage;
         private ToolStripMenuItem cmsUserAdd;
         private ToolStripMenuItem cmsUserEdit;
         private ToolStripMenuItem cmsUserEnable;
         private ToolStripMenuItem cmsUserDisable;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn UserName;
+        private DataGridViewTextBoxColumn Sex;
+        private DataGridViewTextBoxColumn BaseType;
+        private DataGridViewTextBoxColumn AppraisalBase;
+        private DataGridViewCheckBoxColumn IsDel;
     }
 }

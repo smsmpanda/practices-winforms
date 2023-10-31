@@ -27,12 +27,13 @@ namespace WinformCase.Utility
             }
         }
 
-        public static int ExecuteNoQuery(string commondText) 
+        public static int ExecuteNoQuery(string commondText,params MySqlParameter[] parameters) 
         {
             using (MySqlConnection conn = new MySqlConnection(Constr))
             {
                 conn.Open();
                 MySqlCommand sqlCommand = new MySqlCommand(commondText,conn);
+                sqlCommand.Parameters.AddRange(parameters);
                 int effectRows = sqlCommand.ExecuteNonQuery();
                 if(effectRows<0) 
                 {
