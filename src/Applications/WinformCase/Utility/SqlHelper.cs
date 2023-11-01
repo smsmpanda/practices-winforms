@@ -14,12 +14,13 @@ namespace WinformCase.Utility
     {
         public static string Constr = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
 
-        public static DataTable ExecuteTable(string commondText) 
+        public static DataTable ExecuteTable(string commondText, params MySqlParameter[] parameters) 
         {
             using (MySqlConnection conn = new MySqlConnection(Constr))
             {
                 conn.Open();
                 MySqlCommand sqlCommand = new MySqlCommand(commondText,conn);
+                sqlCommand.Parameters.AddRange(parameters);
                 MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlCommand);
                 DataSet ds = new DataSet();
                 sqlDataAdapter.Fill(ds);

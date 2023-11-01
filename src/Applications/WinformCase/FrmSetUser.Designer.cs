@@ -53,7 +53,7 @@
             this.gbxHandle.Size = new System.Drawing.Size(509, 61);
             this.gbxHandle.TabIndex = 3;
             this.gbxHandle.TabStop = false;
-            this.gbxHandle.Text = "groupBox2";
+            this.gbxHandle.Text = "操作";
             // 
             // btnSubmit
             // 

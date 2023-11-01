@@ -102,6 +102,17 @@ namespace WinformCase
             }
         }
 
+
+        private void FrmSetUser_FeedBackParent(object? sender, EventArgs e)
+        {
+            BindUserDataGridView();
+        }
+
+        /// <summary>
+        /// 新增用户
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmsUserAdd_Click(object sender, EventArgs e)
         {
             FrmSetUser frmSetUser = new FrmSetUser();
@@ -109,9 +120,17 @@ namespace WinformCase
             frmSetUser.ShowDialog();
         }
 
-        private void FrmSetUser_FeedBackParent(object? sender, EventArgs e)
+        /// <summary>
+        /// 编辑用户
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cmsUserEdit_Click(object sender, EventArgs e)
         {
-            BindUserDataGridView();
+            int uid = (int)dgvUser.SelectedRows[0].Cells["Id"].Value;
+            FrmSetUser frmSetUser = new FrmSetUser(uid);
+            frmSetUser.FeedBackParent += FrmSetUser_FeedBackParent;
+            frmSetUser.ShowDialog();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Google.Protobuf.WellKnownTypes;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -27,6 +28,26 @@ namespace WinformCase.Models
                 new MySqlParameter("@Sex", this.Sex),
                 new MySqlParameter("@BaseTypeId", this.BaseTypeId),
                 new MySqlParameter("@IsDel", this.IsDel)
+                );
+        }
+
+        public static User? GetUserById(int id) 
+        {
+            string sql = "select Id,UserName,Sex,Password,BaseTypeId,IsDel from Users where id = @uid";
+            var users = ConvertDataTableToModel.ToModel<User>(SqlHelper.ExecuteTable(sql,new MySqlParameter("@uid", id)));
+            return users.FirstOrDefault();
+        }
+
+        public int Update()
+        {
+            string sql = "Update Users set UserName = @UserName,Sex = @Sex,Password = @Password,BaseTypeId = @BaseTypeId,IsDel=@IsDel  where Id = @Id";
+            return SqlHelper.ExecuteNoQuery(sql,
+                new MySqlParameter("@UserName", this.UserName),
+                new MySqlParameter("@Password", this.Password),
+                new MySqlParameter("@Sex", this.Sex),
+                new MySqlParameter("@BaseTypeId", this.BaseTypeId),
+                new MySqlParameter("@IsDel", this.IsDel),
+                new MySqlParameter("@Id", this.Id)
                 );
         }
     }
