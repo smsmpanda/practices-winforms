@@ -1,3 +1,5 @@
+using WinformCase.Common;
+
 namespace WinformCase;
 
 public partial class FrmMain : Form
@@ -9,10 +11,10 @@ public partial class FrmMain : Form
 
     private void FrmMain_Load(object sender, EventArgs e)
     {
-        FrmUserManage frmUserManage = new FrmUserManage();
-        frmUserManage.MdiParent = this;
-        frmUserManage.Parent = splitContainer1.Panel2;
-        frmUserManage.Show();
+        Form form = FormFactory<string>.CreateForm("FrmUserManage");
+        form.MdiParent = this;
+        form.Parent = splitContainer1.Panel2;
+        form.Show();
     }
 
     private void trvMenu_AfterSelect(object sender, TreeViewEventArgs e)
@@ -24,5 +26,11 @@ public partial class FrmMain : Form
         }
         e.Node.BackColor = SystemColors.Highlight; 
         e.Node.ForeColor = Color.White;
+
+
+        Form form = FormFactory<string>.CreateForm(e.Node.Tag.ToString());
+        form.MdiParent = this;
+        form.Parent = splitContainer1.Panel2;
+        form.Show();
     }
 }

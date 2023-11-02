@@ -46,8 +46,8 @@ partial class FrmMain
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.trvMenu);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 152;
+            this.splitContainer1.Size = new System.Drawing.Size(984, 511);
+            this.splitContainer1.SplitterDistance = 186;
             this.splitContainer1.TabIndex = 0;
             // 
             // trvMenu
@@ -58,14 +58,16 @@ partial class FrmMain
             this.trvMenu.Location = new System.Drawing.Point(0, 0);
             this.trvMenu.Name = "trvMenu";
             treeNode1.Name = "user_manage";
+            treeNode1.Tag = "FrmUserManage";
             treeNode1.Text = "用户管理";
             treeNode2.Name = "basic_manage";
+            treeNode2.Tag = "FrmBaseManage";
             treeNode2.Text = "基数管理";
             this.trvMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2});
             this.trvMenu.ShowLines = false;
-            this.trvMenu.Size = new System.Drawing.Size(152, 450);
+            this.trvMenu.Size = new System.Drawing.Size(186, 511);
             this.trvMenu.TabIndex = 0;
             this.trvMenu.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvMenu_AfterSelect);
             // 
@@ -73,7 +75,7 @@ partial class FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(984, 511);
             this.Controls.Add(this.splitContainer1);
             this.IsMdiContainer = true;
             this.Name = "FrmMain";

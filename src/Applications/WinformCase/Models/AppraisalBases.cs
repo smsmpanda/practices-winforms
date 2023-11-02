@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -20,6 +21,16 @@ namespace WinformCase.Models
         {
             DataTable dt = SqlHelper.ExecuteTable("select * from AppraisalBases");
             return ConvertDataTableToModel.ToModel<AppraisalBases>(dt);
+        }
+
+        public int Update()
+        {
+            string sql = "Update Users set BaseType = @BaseType,AppraisalBase = @AppraisalBase,BaseTypeId = @BaseTypeId,IsDel=@IsDel  where Id = @Id";
+            return SqlHelper.ExecuteNoQuery(sql,
+                new MySqlParameter("@BaseType", this.BaseType),
+                new MySqlParameter("@AppraisalBase", this.AppraisalBase),
+                new MySqlParameter("@IsDel", this.IsDel),
+                new MySqlParameter("@Id", this.Id));
         }
     }
 }
