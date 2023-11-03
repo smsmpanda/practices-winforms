@@ -28,6 +28,8 @@ namespace WinformCase.Common
 
         public static Form CreateForm(T formName) 
         {
+            CloseForm();
+
             if (_formCaches.ContainsKey(formName)) 
             {
                 return _formCaches[formName];
@@ -40,6 +42,15 @@ namespace WinformCase.Common
             var form =  (Form)Activator.CreateInstance(currentType);
             _formCaches.Add(formName, form);
             return form;
+        }
+
+
+        private static void CloseForm() 
+        {
+            foreach (var form in _formCaches)
+            {
+                form.Value.Hide();
+            }
         }
     }
 }

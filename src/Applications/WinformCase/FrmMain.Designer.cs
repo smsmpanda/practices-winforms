@@ -30,6 +30,7 @@ partial class FrmMain
     {
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("用户管理");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("基数管理");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("绩效管理");
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.trvMenu = new System.Windows.Forms.TreeView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -46,6 +47,11 @@ partial class FrmMain
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.trvMenu);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(10);
             this.splitContainer1.Size = new System.Drawing.Size(984, 511);
             this.splitContainer1.SplitterDistance = 186;
             this.splitContainer1.TabIndex = 0;
@@ -63,9 +69,13 @@ partial class FrmMain
             treeNode2.Name = "basic_manage";
             treeNode2.Tag = "FrmBaseManage";
             treeNode2.Text = "基数管理";
+            treeNode3.Name = "jixiao_manage";
+            treeNode3.Tag = "FrmJxManage";
+            treeNode3.Text = "绩效管理";
             this.trvMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
-            treeNode2});
+            treeNode2,
+            treeNode3});
             this.trvMenu.ShowLines = false;
             this.trvMenu.Size = new System.Drawing.Size(186, 511);
             this.trvMenu.TabIndex = 0;
