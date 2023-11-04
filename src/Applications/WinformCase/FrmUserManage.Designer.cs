@@ -37,17 +37,17 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
             this.dgvUser = new System.Windows.Forms.DataGridView();
-            this.cmsUserManage = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmsUserAdd = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsUserEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsUserEnable = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsUserDisable = new System.Windows.Forms.ToolStripMenuItem();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BaseType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AppraisalBase = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsDel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.cmsUserManage = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsUserAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsUserEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsUserEnable = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsUserDisable = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.cmsUserManage.SuspendLayout();
@@ -55,7 +55,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.checkStopWork);
             this.groupBox1.Controls.Add(this.cbxBaseType);
@@ -127,7 +128,9 @@
             // 
             this.dgvUser.AllowUserToAddRows = false;
             this.dgvUser.AllowUserToDeleteRows = false;
-            this.dgvUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUser.BackgroundColor = System.Drawing.Color.White;
             this.dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -149,42 +152,6 @@
             this.dgvUser.TabIndex = 1;
             this.dgvUser.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUser_CellMouseDown);
             this.dgvUser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvUser_MouseDown);
-            // 
-            // cmsUserManage
-            // 
-            this.cmsUserManage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsUserAdd,
-            this.cmsUserEdit,
-            this.cmsUserEnable,
-            this.cmsUserDisable});
-            this.cmsUserManage.Name = "cmsUserManage";
-            this.cmsUserManage.Size = new System.Drawing.Size(101, 92);
-            // 
-            // cmsUserAdd
-            // 
-            this.cmsUserAdd.Name = "cmsUserAdd";
-            this.cmsUserAdd.Size = new System.Drawing.Size(100, 22);
-            this.cmsUserAdd.Text = "新建";
-            this.cmsUserAdd.Click += new System.EventHandler(this.cmsUserAdd_Click);
-            // 
-            // cmsUserEdit
-            // 
-            this.cmsUserEdit.Name = "cmsUserEdit";
-            this.cmsUserEdit.Size = new System.Drawing.Size(100, 22);
-            this.cmsUserEdit.Text = "编辑";
-            this.cmsUserEdit.Click += new System.EventHandler(this.cmsUserEdit_Click);
-            // 
-            // cmsUserEnable
-            // 
-            this.cmsUserEnable.Name = "cmsUserEnable";
-            this.cmsUserEnable.Size = new System.Drawing.Size(100, 22);
-            this.cmsUserEnable.Text = "启用";
-            // 
-            // cmsUserDisable
-            // 
-            this.cmsUserDisable.Name = "cmsUserDisable";
-            this.cmsUserDisable.Size = new System.Drawing.Size(100, 22);
-            this.cmsUserDisable.Text = "停用";
             // 
             // Id
             // 
@@ -232,6 +199,42 @@
             this.IsDel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.IsDel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.IsDel.Width = 81;
+            // 
+            // cmsUserManage
+            // 
+            this.cmsUserManage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsUserAdd,
+            this.cmsUserEdit,
+            this.cmsUserEnable,
+            this.cmsUserDisable});
+            this.cmsUserManage.Name = "cmsUserManage";
+            this.cmsUserManage.Size = new System.Drawing.Size(101, 92);
+            // 
+            // cmsUserAdd
+            // 
+            this.cmsUserAdd.Name = "cmsUserAdd";
+            this.cmsUserAdd.Size = new System.Drawing.Size(100, 22);
+            this.cmsUserAdd.Text = "新建";
+            this.cmsUserAdd.Click += new System.EventHandler(this.cmsUserAdd_Click);
+            // 
+            // cmsUserEdit
+            // 
+            this.cmsUserEdit.Name = "cmsUserEdit";
+            this.cmsUserEdit.Size = new System.Drawing.Size(100, 22);
+            this.cmsUserEdit.Text = "编辑";
+            this.cmsUserEdit.Click += new System.EventHandler(this.cmsUserEdit_Click);
+            // 
+            // cmsUserEnable
+            // 
+            this.cmsUserEnable.Name = "cmsUserEnable";
+            this.cmsUserEnable.Size = new System.Drawing.Size(100, 22);
+            this.cmsUserEnable.Text = "启用";
+            // 
+            // cmsUserDisable
+            // 
+            this.cmsUserDisable.Name = "cmsUserDisable";
+            this.cmsUserDisable.Size = new System.Drawing.Size(100, 22);
+            this.cmsUserDisable.Text = "停用";
             // 
             // FrmUserManage
             // 
