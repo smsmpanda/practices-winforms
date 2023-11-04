@@ -1,10 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WinformCase.Utility;
 
 namespace WinformCase.Models
@@ -17,7 +12,7 @@ namespace WinformCase.Models
         public int IsDel { get; set; }
 
 
-        public static List<AppraisalBases> GetAll() 
+        public static List<AppraisalBases> GetAll()
         {
             DataTable dt = SqlHelper.ExecuteTable("select * from AppraisalBases");
             return ConvertDataTableToModel.ToModel<AppraisalBases>(dt);

@@ -55,16 +55,16 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.checkStopWork);
             this.groupBox1.Controls.Add(this.cbxBaseType);
             this.groupBox1.Controls.Add(this.lblShenfen);
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.lblUserName);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Location = new System.Drawing.Point(5, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(800, 83);
+            this.groupBox1.Size = new System.Drawing.Size(902, 84);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "筛选";
@@ -72,7 +72,7 @@
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(686, 35);
+            this.btnSearch.Location = new System.Drawing.Point(788, 35);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 5;
@@ -127,6 +127,8 @@
             // 
             this.dgvUser.AllowUserToAddRows = false;
             this.dgvUser.AllowUserToDeleteRows = false;
+            this.dgvUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvUser.BackgroundColor = System.Drawing.Color.White;
             this.dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -137,14 +139,13 @@
             this.AppraisalBase,
             this.IsDel});
             this.dgvUser.ContextMenuStrip = this.cmsUserManage;
-            this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvUser.Location = new System.Drawing.Point(0, 83);
+            this.dgvUser.Location = new System.Drawing.Point(5, 103);
             this.dgvUser.MultiSelect = false;
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.ReadOnly = true;
             this.dgvUser.RowTemplate.Height = 25;
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUser.Size = new System.Drawing.Size(800, 367);
+            this.dgvUser.Size = new System.Drawing.Size(902, 403);
             this.dgvUser.TabIndex = 1;
             this.dgvUser.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUser_CellMouseDown);
             this.dgvUser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvUser_MouseDown);
@@ -208,6 +209,7 @@
             // 
             // BaseType
             // 
+            this.BaseType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.BaseType.DataPropertyName = "BaseType";
             this.BaseType.HeaderText = "基数类型";
             this.BaseType.Name = "BaseType";
@@ -222,19 +224,20 @@
             // 
             // IsDel
             // 
-            this.IsDel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IsDel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.IsDel.DataPropertyName = "IsDel";
             this.IsDel.HeaderText = "是否停职";
             this.IsDel.Name = "IsDel";
             this.IsDel.ReadOnly = true;
             this.IsDel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.IsDel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.IsDel.Width = 81;
             // 
             // FrmUserManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(913, 512);
             this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

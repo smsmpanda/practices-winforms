@@ -1,11 +1,4 @@
-﻿using Google.Protobuf.WellKnownTypes;
-using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
 using WinformCase.Utility;
 
 namespace WinformCase.Models
@@ -19,22 +12,10 @@ namespace WinformCase.Models
         public int BaseTypeId { get; set; }
         public int IsDel { get; set; }
 
-        public int Insert() 
-        {
-            string sql = $"INSERT INTO Users(UserName,Password,Sex,BaseTypeId,IsDel) values (@UserName,@Password,@Sex,@BaseTypeId,@IsDel)";
-            return SqlHelper.ExecuteNoQuery(sql,
-                new MySqlParameter("@UserName",this.UserName),
-                new MySqlParameter("@Password", this.Password),
-                new MySqlParameter("@Sex", this.Sex),
-                new MySqlParameter("@BaseTypeId", this.BaseTypeId),
-                new MySqlParameter("@IsDel", this.IsDel)
-                );
-        }
-
-        public static User? GetUserById(int id) 
+        public static User? GetUserById(int id)
         {
             string sql = "select Id,UserName,Sex,Password,BaseTypeId,IsDel from Users where id = @uid";
-            var users = ConvertDataTableToModel.ToModel<User>(SqlHelper.ExecuteTable(sql,new MySqlParameter("@uid", id)));
+            var users = ConvertDataTableToModel.ToModel<User>(SqlHelper.ExecuteTable(sql, new MySqlParameter("@uid", id)));
             return users.FirstOrDefault();
         }
 
@@ -48,6 +29,18 @@ namespace WinformCase.Models
                 new MySqlParameter("@BaseTypeId", this.BaseTypeId),
                 new MySqlParameter("@IsDel", this.IsDel),
                 new MySqlParameter("@Id", this.Id)
+                );
+        }
+
+        public int Insert()
+        {
+            string sql = $"INSERT INTO Users(UserName,Password,Sex,BaseTypeId,IsDel) values (@UserName,@Password,@Sex,@BaseTypeId,@IsDel)";
+            return SqlHelper.ExecuteNoQuery(sql,
+                new MySqlParameter("@UserName", this.UserName),
+                new MySqlParameter("@Password", this.Password),
+                new MySqlParameter("@Sex", this.Sex),
+                new MySqlParameter("@BaseTypeId", this.BaseTypeId),
+                new MySqlParameter("@IsDel", this.IsDel)
                 );
         }
     }

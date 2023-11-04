@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 
 namespace WinformCase.Common
 {
@@ -20,32 +14,32 @@ namespace WinformCase.Common
         /// </summary>
         private static List<Type> _formTypes = new List<Type>();
 
-        static FormFactory() 
+        static FormFactory()
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
             _formTypes = assembly.GetTypes().Where(t => t.IsSubclassOf(typeof(Form)))?.ToList();
         }
 
-        public static Form CreateForm(T formName) 
+        public static Form CreateForm(T formName)
         {
             CloseForm();
 
-            if (_formCaches.ContainsKey(formName)) 
+            if (_formCaches.ContainsKey(formName))
             {
                 return _formCaches[formName];
             }
             var currentType = _formTypes.FirstOrDefault(t => t.Name.Equals(formName));
-            if (currentType is null) 
+            if (currentType is null)
             {
                 throw new Exception("The currently specified name Form type was not found.");
             }
-            var form =  (Form)Activator.CreateInstance(currentType);
+            var form = (Form)Activator.CreateInstance(currentType);
             _formCaches.Add(formName, form);
             return form;
         }
 
 
-        private static void CloseForm() 
+        private static void CloseForm()
         {
             foreach (var form in _formCaches)
             {

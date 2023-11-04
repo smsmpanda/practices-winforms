@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using WinformCase.Utility;
 
 namespace WinformCase.Models
@@ -19,7 +14,13 @@ namespace WinformCase.Models
         public int AppraisaBase { get; set; }
         public int IsDel { get; set; }
 
-        public static List<UserAppraisaBases> GetUserListJoinAppraisal() 
+        public static List<UserAppraisaBases> GetUserListJoinAppraisal()
+        {
+            DataTable dt = GetUserAppaisalDataTable();
+            return ConvertDataTableToModel.ToModel<UserAppraisaBases>(dt);
+        }
+
+        public static DataTable GetUserAppaisalDataTable()
         {
             string sql = @"
                     select
@@ -33,7 +34,7 @@ namespace WinformCase.Models
                     from Users u Left join AppraisalBases a on u.BaseTypeId = a.Id";
 
             DataTable dt = SqlHelper.ExecuteTable(sql);
-            return ConvertDataTableToModel.ToModel<UserAppraisaBases>(dt);
+            return dt;
         }
     }
 }

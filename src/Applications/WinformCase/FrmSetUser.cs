@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using WinformCase.Models;
+﻿using WinformCase.Models;
 
 namespace WinformCase
 {
@@ -79,7 +70,7 @@ namespace WinformCase
             {
                 this.FeedBackParent.Invoke(this, null);
             }
-            
+
             this.Close();
         }
     }

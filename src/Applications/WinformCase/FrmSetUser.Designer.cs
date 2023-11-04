@@ -166,7 +166,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmSetUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FrmSetUser";
+            this.Text = "编辑";
             this.Load += new System.EventHandler(this.FrmSetUser_Load);
             this.gbxHandle.ResumeLayout(false);
             this.gbxBaseInfo.ResumeLayout(false);

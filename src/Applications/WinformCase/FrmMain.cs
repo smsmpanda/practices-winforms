@@ -21,10 +21,10 @@ public partial class FrmMain : Form
     {
         foreach (TreeNode node in trvMenu.Nodes)
         {
-            node.BackColor = Color.White; 
+            node.BackColor = Color.White;
             node.ForeColor = Color.Black;
         }
-        e.Node.BackColor = SystemColors.Highlight; 
+        e.Node.BackColor = SystemColors.Highlight;
         e.Node.ForeColor = Color.White;
 
 

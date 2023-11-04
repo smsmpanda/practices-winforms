@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using WinformCase.Models;
+﻿using WinformCase.Models;
 
 namespace WinformCase
 {
@@ -40,7 +31,8 @@ namespace WinformCase
             {
                 result = result.FindAll(u => u.BaseTypeId == baseType);
             }
-            if (isDel == 0) {
+            if (isDel == 0)
+            {
                 result = result.FindAll(u => u.IsDel == isDel);
             }
 
@@ -116,7 +108,7 @@ namespace WinformCase
         private void cmsUserAdd_Click(object sender, EventArgs e)
         {
             FrmSetUser frmSetUser = new FrmSetUser();
-            frmSetUser.FeedBackParent += FrmSetUser_FeedBackParent; 
+            frmSetUser.FeedBackParent += FrmSetUser_FeedBackParent;
             frmSetUser.ShowDialog();
         }
 
