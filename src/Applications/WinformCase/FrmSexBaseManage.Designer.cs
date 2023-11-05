@@ -1,6 +1,6 @@
 ﻿namespace WinformCase
 {
-    partial class FrmBasicManage
+    partial class FrmSexBaseManage
     {
         /// <summary>
         /// Required designer variable.

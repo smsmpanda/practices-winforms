@@ -161,6 +161,7 @@
             this.cbxYear.Size = new System.Drawing.Size(121, 25);
             this.cbxYear.TabIndex = 0;
             this.cbxYear.Text = "2023";
+            this.cbxYear.SelectedIndexChanged += new System.EventHandler(this.cbxYear_SelectedIndexChanged);
             // 
             // FrmJxManage
             // 

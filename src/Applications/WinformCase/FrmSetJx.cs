@@ -65,8 +65,8 @@ namespace WinformCase
             }
 
             FeedBackParent?.Invoke(this, null);
-            this.Close();
             MessageBox.Show("修改成功");
+            this.Close();
         }
     }
 }

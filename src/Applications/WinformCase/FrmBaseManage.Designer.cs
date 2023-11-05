@@ -58,6 +58,8 @@
             this.dgvBase.RowTemplate.Height = 25;
             this.dgvBase.Size = new System.Drawing.Size(773, 431);
             this.dgvBase.TabIndex = 0;
+            this.dgvBase.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBase_CellMouseDown);
+            this.dgvBase.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvBase_MouseDown);
             // 
             // Id
             // 

@@ -1,8 +1,8 @@
 ﻿namespace WinformCase
 {
-    public partial class FrmBasicManage : Form
+    public partial class FrmSexBaseManage : Form
     {
-        public FrmBasicManage()
+        public FrmSexBaseManage()
         {
             InitializeComponent();
         }

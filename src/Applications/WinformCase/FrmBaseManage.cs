@@ -13,5 +13,15 @@ namespace WinformCase
         {
             dgvBase.DataSource = AppraisalBases.GetAll();
         }
+
+        private void dgvBase_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
+        private void dgvBase_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

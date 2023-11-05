@@ -10,6 +10,7 @@ namespace WinformCase
         {
             InitializeComponent();
         }
+
         private void FrmJxManage_Load(object sender, EventArgs e)
         {
             DynamicAddGridViewColumn();
@@ -162,6 +163,11 @@ namespace WinformCase
         }
 
         private void FrmSetJx_FeedBackParent(object? sender, EventArgs e)
+        {
+            UserAppraisaBind();
+        }
+
+        private void cbxYear_SelectedIndexChanged(object sender, EventArgs e)
         {
             UserAppraisaBind();
         }
