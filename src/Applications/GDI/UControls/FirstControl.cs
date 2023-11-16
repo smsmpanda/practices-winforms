@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,25 +15,34 @@ namespace GDI.UControls
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            base.OnPaint(e);
+            
 
-            StringFormat style = new StringFormat();
-            style.Alignment = StringAlignment.Near;
+            //StringFormat style = new StringFormat();
+            //style.Alignment = StringAlignment.Near;
 
-            switch(alignmentValue) 
+            //switch (alignmentValue)
+            //{
+            //    case ContentAlignment.MiddleLeft:
+            //        style.Alignment = StringAlignment.Near;
+            //        break;
+            //    case ContentAlignment.MiddleRight:
+            //        style.Alignment = StringAlignment.Far;
+            //        break;
+            //    case ContentAlignment.MiddleCenter:
+            //        style.Alignment = StringAlignment.Center;
+            //        break;
+            //}
+
+            //e.Graphics.DrawString(this.Text, this.Font, new SolidBrush(this.ForeColor), this.ClientRectangle, style);
+
+            using (System.Drawing.Pen myPen = new System.Drawing.Pen(Color.Red))
             {
-                case ContentAlignment.MiddleLeft:
-                    style.Alignment = StringAlignment.Near;
-                    break;
-                case ContentAlignment.MiddleRight:
-                    style.Alignment = StringAlignment.Far;
-                    break;
-                case ContentAlignment.MiddleCenter:
-                    style.Alignment = StringAlignment.Center;
-                    break;
+                // Draw an aqua rectangle in the rectangle represented by the control.  
+                e.Graphics.DrawRectangle(myPen, new Rectangle(this.Location,
+                   this.Size));
             }
 
-            e.Graphics.DrawString(this.Text,this.Font,new SolidBrush(this.ForeColor),this.ClientRectangle,style);
+            base.OnPaint(e);
         }
 
         [Category("Custome"),Description("Specifies the alignment of text.")]
