@@ -160,9 +160,14 @@ namespace MineVisual.Controls
                         graphicsPath.AddRectangle(clientRectangle);
                     }
                 }
+                
                 e.Graphics.SetGDIHigh();
+
                 if (_fillColor != Color.Empty && _fillColor != Color.Transparent && _fillColor != this.BackColor)
+                {
                     e.Graphics.FillPath(new SolidBrush(_fillColor), graphicsPath);
+                }
+
                 if (_isShowRectBorder)
                 {
                     Color rectColor = _rectColor;

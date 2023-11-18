@@ -15,8 +15,6 @@ namespace GDI.UControls
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            
-
             //StringFormat style = new StringFormat();
             //style.Alignment = StringAlignment.Near;
 
@@ -38,14 +36,13 @@ namespace GDI.UControls
             using (System.Drawing.Pen myPen = new System.Drawing.Pen(Color.Red))
             {
                 // Draw an aqua rectangle in the rectangle represented by the control.  
-                e.Graphics.DrawRectangle(myPen, new Rectangle(this.Location,
-                   this.Size));
+                e.Graphics.DrawRectangle(myPen, new Rectangle(this.Location, this.Size));
             }
 
             base.OnPaint(e);
         }
 
-        [Category("Custome"),Description("Specifies the alignment of text.")]
+        [Category("Custome"), Description("Specifies the alignment of text.")]
         public ContentAlignment TextAlignment
         {
 
@@ -53,9 +50,6 @@ namespace GDI.UControls
             set
             {
                 alignmentValue = value;
-
-                // The Invalidate method invokes the OnPaint method described
-                // in step 3.
                 Invalidate();
             }
         }

@@ -28,68 +28,27 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-            this.firstControl1 = new GDI.UControls.FirstControl();
-            this.firstControl2 = new GDI.UControls.FirstControl();
-            this.firstControl3 = new GDI.UControls.FirstControl();
-            this.firstControl4 = new GDI.UControls.FirstControl();
-            this.firstControl5 = new GDI.UControls.FirstControl();
+            this.userControlBase1 = new GDI.UserControlBase();
             this.SuspendLayout();
             // 
-            // firstControl1
+            // userControlBase1
             // 
-            this.firstControl1.Location = new System.Drawing.Point(214, 65);
-            this.firstControl1.Name = "firstControl1";
-            this.firstControl1.Size = new System.Drawing.Size(163, 38);
-            this.firstControl1.TabIndex = 0;
-            this.firstControl1.Text = "firstControl1";
-            this.firstControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // firstControl2
-            // 
-            this.firstControl2.Location = new System.Drawing.Point(107, 79);
-            this.firstControl2.Name = "firstControl2";
-            this.firstControl2.Size = new System.Drawing.Size(200, 46);
-            this.firstControl2.TabIndex = 1;
-            this.firstControl2.Text = "firstControl2";
-            this.firstControl2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // firstControl3
-            // 
-            this.firstControl3.Location = new System.Drawing.Point(235, 263);
-            this.firstControl3.Name = "firstControl3";
-            this.firstControl3.Size = new System.Drawing.Size(177, 57);
-            this.firstControl3.TabIndex = 2;
-            this.firstControl3.Text = "firstControl3";
-            this.firstControl3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // firstControl4
-            // 
-            this.firstControl4.Location = new System.Drawing.Point(235, 234);
-            this.firstControl4.Name = "firstControl4";
-            this.firstControl4.Size = new System.Drawing.Size(75, 23);
-            this.firstControl4.TabIndex = 3;
-            this.firstControl4.Text = "firstControl4";
-            this.firstControl4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // firstControl5
-            // 
-            this.firstControl5.Location = new System.Drawing.Point(290, 172);
-            this.firstControl5.Name = "firstControl5";
-            this.firstControl5.Size = new System.Drawing.Size(75, 23);
-            this.firstControl5.TabIndex = 4;
-            this.firstControl5.Text = "firstControl5";
-            this.firstControl5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.userControlBase1.BackColor = System.Drawing.Color.Transparent;
+            this.userControlBase1.ExtBorderColor = System.Drawing.Color.IndianRed;
+            this.userControlBase1.ExtBorderWidth = 0;
+            this.userControlBase1.ExtFillColor = System.Drawing.Color.Black;
+            this.userControlBase1.ExtRadius = 5;
+            this.userControlBase1.Location = new System.Drawing.Point(277, 118);
+            this.userControlBase1.Name = "userControlBase1";
+            this.userControlBase1.Size = new System.Drawing.Size(120, 50);
+            this.userControlBase1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.firstControl5);
-            this.Controls.Add(this.firstControl4);
-            this.Controls.Add(this.firstControl3);
-            this.Controls.Add(this.firstControl2);
-            this.Controls.Add(this.firstControl1);
+            this.Controls.Add(this.userControlBase1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -98,9 +57,5 @@ partial class Form1
 
     #endregion
 
-    private UControls.FirstControl firstControl1;
-    private UControls.FirstControl firstControl2;
-    private UControls.FirstControl firstControl3;
-    private UControls.FirstControl firstControl4;
-    private UControls.FirstControl firstControl5;
+    private UserControlBase userControlBase1;
 }

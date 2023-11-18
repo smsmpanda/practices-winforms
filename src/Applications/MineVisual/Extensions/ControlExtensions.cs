@@ -50,8 +50,6 @@ namespace MineVisual.Extensions
 
             if (blue > 255) blue = 255;
 
-
-
             return Color.FromArgb(color.A, (int)red, (int)green, (int)blue);
         }
     }
